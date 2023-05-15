@@ -43,7 +43,22 @@
             <input type="button" value="=" onclick="calculate()">
             <input type="button" value="/" onclick="addToResult('/')"><br>
         </div>
-		<input type="button" value="Clear" onclick="clearResult()">
+        <div class="row">
+            <input type="button" value="sin" onclick="addToResult('sin(')">
+            <input type="button" value="cos" onclick="addToResult('cos(')">
+            <input type="button" value="tan" onclick="addToResult('tan(')">
+        </div>
+        <div class="row">
+            <input type="button" value="log" onclick="addToResult('log(')">
+            <input type="button" value="ln" onclick="addToResult('ln(')">
+            <input type="button" value="^" onclick="addToResult('^(')">
+            <input type="button" value="exp" onclick="addToResult('exp(')">
+        </div>
+        <div class="row">
+            <input type="button" value="π" onclick="addToResult('Math.PI')">
+            <input type="button" value="Clear" onclick="clearResult()">
+            <input type="button" value="e" onclick="addToResult('Math.E')">
+        </div>
         <script src="app.js"></script>
 	</div>
 </body>

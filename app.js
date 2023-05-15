@@ -19,6 +19,12 @@ function addToResult(value) {
     case "MR":
       result.value = memory.toString();
       break;
+    case "pi":
+      result.value += Math.PI;
+      break;
+    case "e":
+      result.value += Math.E;
+      break;
     default:
       result.value += value;
       break;
@@ -27,6 +33,19 @@ function addToResult(value) {
 
 function calculate() {
   let result = document.getElementById("result").value;
+  
+  // Add trigonometric functions
+  result = result.replace(/sin/g, "Math.sin");
+  result = result.replace(/cos/g, "Math.cos");
+  result = result.replace(/tan/g, "Math.tan");
+  
+  // Add logarithmic functions
+  result = result.replace(/log/g, "Math.log10");
+  result = result.replace(/ln/g, "Math.log");
+
+  // Add exponential functions
+  result = result.replace(/\^/g, "**");
+  result = result.replace(/exp/g, "Math.exp");
 
   try {
     let answer = eval(result);
